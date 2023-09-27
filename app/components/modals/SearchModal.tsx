@@ -120,7 +120,7 @@ const SearchModal = () => {
   let bodyContent = (
     <div className="flex flex-col gap-8">
       <Heading
-        title="Where do you wanna go?"
+        title="What do you want to rent?"
         subtitle="Find the perfect location!"
       />
       <CountrySelect 
@@ -138,7 +138,7 @@ const SearchModal = () => {
       <div className="flex flex-col gap-8">
         <Heading
           title="When do you plan to go?"
-          subtitle="Make sure everyone is free!"
+          subtitle=""
         />
         <Calendar
           onChange={(value) => setDateRange(value.selection)}
@@ -153,30 +153,21 @@ const SearchModal = () => {
       <div className="flex flex-col gap-8">
         <Heading
           title="More information"
-          subtitle="Find your perfect place!"
+          subtitle="Find your perfect field!"
         />
         <Counter 
           onChange={(value) => setGuestCount(value)}
           value={guestCount}
-          title="Guests" 
-          subtitle="How many guests are coming?"
+          title="Number of People" 
+          subtitle="How many people are coming?"
         />
         <hr />
         <Counter 
           onChange={(value) => setRoomCount(value)}
           value={roomCount}
-          title="Rooms" 
-          subtitle="How many rooms do you need?"
+          title="Fields" 
+          subtitle="How many fields do you need?"
         />        
-        <hr />
-        <Counter 
-          onChange={(value) => {
-            setBathroomCount(value)
-          }}
-          value={bathroomCount}
-          title="Bathrooms"
-          subtitle="How many bahtrooms do you need?"
-        />
       </div>
     )
   }

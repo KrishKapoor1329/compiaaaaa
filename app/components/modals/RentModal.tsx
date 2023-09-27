@@ -131,7 +131,7 @@ const RentModal = () => {
   let bodyContent = (
     <div className="flex flex-col gap-8">
       <Heading
-        title="Which of these best describes your place?"
+        title="Which of these best describes your field?"
         subtitle="Pick a category"
       />
       <div 
@@ -163,8 +163,8 @@ const RentModal = () => {
     bodyContent = (
       <div className="flex flex-col gap-8">
         <Heading
-          title="Where is your place located?"
-          subtitle="Help guests find you!"
+          title="Where is your field located?"
+          subtitle="Help clients find you!"
         />
         <CountrySelect 
           value={location} 
@@ -186,22 +186,9 @@ const RentModal = () => {
           onChange={(value) => setCustomValue('guestCount', value)}
           value={guestCount}
           title="Guests" 
-          subtitle="How many guests do you allow?"
+          subtitle="How many people do you allow?"
         />
         <hr />
-        <Counter 
-          onChange={(value) => setCustomValue('roomCount', value)}
-          value={roomCount}
-          title="Rooms" 
-          subtitle="How many rooms do you have?"
-        />
-        <hr />
-        <Counter 
-          onChange={(value) => setCustomValue('bathroomCount', value)}
-          value={bathroomCount}
-          title="Bathrooms" 
-          subtitle="How many bathrooms do you have?"
-        />
       </div>
     )
   }
@@ -210,8 +197,8 @@ const RentModal = () => {
     bodyContent = (
       <div className="flex flex-col gap-8">
         <Heading
-          title="Add a photo of your place"
-          subtitle="Show guests what your place looks like!"
+          title="Add a photo of your field"
+          subtitle="Show guests what your field looks like!"
         />
         <ImageUpload
           onChange={(value) => setCustomValue('imageSrc', value)}
@@ -225,7 +212,7 @@ const RentModal = () => {
     bodyContent = (
       <div className="flex flex-col gap-8">
         <Heading
-          title="How would you describe your place?"
+          title="How would you describe your field?"
           subtitle="Short and sweet works best!"
         />
         <Input
@@ -254,7 +241,7 @@ const RentModal = () => {
       <div className="flex flex-col gap-8">
         <Heading
           title="Now, set your price"
-          subtitle="How much do you charge per night?"
+          subtitle="How much do you charge per day?"
         />
         <Input
           id="price"
@@ -274,7 +261,7 @@ const RentModal = () => {
     <Modal
       disabled={isLoading}
       isOpen={rentModal.isOpen}
-      title="Airbnb your home!"
+      title="Put your field!"
       actionLabel={actionLabel}
       onSubmit={handleSubmit(onSubmit)}
       secondaryActionLabel={secondaryActionLabel}

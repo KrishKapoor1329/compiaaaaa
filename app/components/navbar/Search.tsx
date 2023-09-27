@@ -47,7 +47,7 @@ const Search = () => {
       return `${guestCount} Guests`;
     }
 
-    return 'Add Guests';
+    return 'Add People';
   }, [guestCount]);
 
   return ( 
@@ -112,7 +112,7 @@ const Search = () => {
           <div 
             className="
               p-2 
-              bg-rose-500 
+              bg-sky-500 
               rounded-full 
               text-white
             "

@@ -28,7 +28,7 @@ const PropertiesClient: React.FC<PropertiesClientProps> = ({
 
     axios.delete(`/api/listings/${id}`)
     .then(() => {
-      toast.success('Listing deleted');
+      toast.success('Field deleted');
       router.refresh();
     })
     .catch((error) => {
@@ -43,8 +43,8 @@ const PropertiesClient: React.FC<PropertiesClientProps> = ({
   return ( 
     <Container>
       <Heading
-        title="Properties"
-        subtitle="List of your properties"
+        title="Fields"
+        subtitle="List of your fields"
       />
       <div 
         className="
@@ -66,7 +66,7 @@ const PropertiesClient: React.FC<PropertiesClientProps> = ({
             actionId={listing.id}
             onAction={onDelete}
             disabled={deletingId === listing.id}
-            actionLabel="Delete property"
+            actionLabel="Delete field"
             currentUser={currentUser}
           />
         ))}
